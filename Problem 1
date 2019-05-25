@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double element[10];
+    double smallest, largest, avg, total;
+    int x, maxX, minX;
+    
+    cout << "Enter 10 numbers\n";
+    for (x = 0; x < 10; x++)
+        element[x]=0.0;
+    for (x = 0; x < 10; x++)
+        cin >> element[x];
+    for (x = 0; x < 10; x++)
+        cout << element[x] << " ";
+    total = 0;
+    for (x = 0; x < 10; x++)
+    total = total+element[x];
+    avg = total /10;
+        cout << " \n" << "Total = "<< total << "\nAverage = "<< avg;    
+    maxX = 0; 
+    for (x = 1; x < 10; x++)
+        if (element[maxX] < element[x])
+            maxX = x;
+    largest = element[maxX];
+        cout << " \nThe largest integer is " << largest;
+    minX = 0;
+    for(x = 1; x < 10; x++)
+    if (element[minX] > element[x])
+	
+            minX = x;
+    smallest = element[minX];
+    cout << " | The smallest integer is " << smallest << "\nEnd of Program";
+    return 0;
+}
